@@ -5,9 +5,14 @@ import { products } from './products';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'angular-junior-test';
   dataList: IProduct[] = products;
+
+  filterApplied(filteredData: Array<IProduct>): void {
+    alert(filteredData.length);
+    this.dataList = filteredData;
+  }
 }

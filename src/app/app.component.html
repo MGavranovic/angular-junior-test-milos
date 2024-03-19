@@ -1,4 +1,6 @@
 <div>
-  <div>your new component goes here</div>
-  <app-product-list [products]=dataList  ></app-product-list>
+  <app-new-component-milos
+    (newItemEvent)="filterApplied($event)"
+  ></app-new-component-milos>
+  <app-product-list [products]="dataList"></app-product-list>
 </div>
